@@ -1,3 +1,5 @@
+// The code is new, but the idea is from http://wiki.tcl.tk/9563
+
 using System;
 using System.Runtime.InteropServices;
 
