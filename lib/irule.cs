@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace Irule
 {
-    public class TclInterp
+    public class TclInterp : IDisposable
     {
         [DllImport("libtcl.dylib")]
         protected static extern IntPtr Tcl_CreateInterp();
