@@ -25,6 +25,8 @@ namespace Irule
         [DllImport("tcl8.4")]
         protected static extern void Tcl_Finalize();
 
+        protected const int TCL_ERROR = 1;
+
         private IntPtr interp;
         private bool disposed;
 
@@ -64,9 +66,16 @@ namespace Irule
                 throw new ObjectDisposedException("Attempt to use disposed Tcl interpreter");
             }
 
-            Tcl_Eval(interp, text);
-            var result  = Tcl_GetStringResult(interp);
-            return Marshal.PtrToStringAnsi(result);
+            var status = Tcl_Eval(interp, text);
+            var raw    = Tcl_GetStringResult(interp);
+            var result = Marshal.PtrToStringAnsi(raw);
+
+            if (TCL_ERROR == status)
+            {
+                throw new Exception("Tcl interpreter returned an error: " + result);
+            }
+
+            return result;
         }
     }
 }
