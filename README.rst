@@ -18,8 +18,8 @@ Installation
 
 #. ``igem install irule``, or just put ``tcl.rb`` and ``irule.dll``
 somewhere in your ``LOAD_PATH``.
-#. On Linux or Mac, add the following to the ``<configuration>``
-section of ``/etc/mono/config``::
+#. On Linux or Mac, you might need to add the following to the
+``<configuration>`` section of ``/etc/mono/config``::
 
   <dllmap dll="tcl85" target="tcl8.5"/>
 
