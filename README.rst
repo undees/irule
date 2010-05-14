@@ -9,16 +9,17 @@ its more full-featured cousin, the tcl_ Ruby library.
 
 Prerequisites
 -------------
-#. IronRuby.
-#. Tcl 8.5.
-#. Mono or .NET.
+1. IronRuby.
+2. Tcl 8.5.
+3. Mono or .NET.
 
 Installation
 ------------
 
-#. ``igem install irule``, or just put ``tcl.rb`` and ``irule.dll``
+1. ``igem install irule``, or just put ``tcl.rb`` and ``irule.dll``
 somewhere in your ``LOAD_PATH``.
-#. On Linux or Mac, you might need to add the following to the
+
+2. On Linux or Mac, you might need to add the following to the
 ``<configuration>`` section of ``/etc/mono/config``::
 
   <dllmap dll="tcl85" target="tcl8.5"/>
