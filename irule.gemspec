@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'irule'
-  s.version     = '0.1'
+  s.version     = '0.2'
   s.platform    = 'universal-dotnet'
   s.authors     = ['Ian Dees']
   s.email       = ['undees@gmail.com']

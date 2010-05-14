@@ -7,22 +7,22 @@ namespace Irule
 {
     public class TclInterp : IDisposable
     {
-        [DllImport("tcl8.4")]
+        [DllImport("tcl85")]
         protected static extern IntPtr Tcl_CreateInterp();
 
-        [DllImport("tcl8.4")]
+        [DllImport("tcl85")]
         protected static extern int Tcl_Init(IntPtr interp);
 
-        [DllImport("tcl8.4")]
+        [DllImport("tcl85")]
         protected static extern int Tcl_Eval(IntPtr interp, string script);
 
-        [DllImport("tcl8.4")]
+        [DllImport("tcl85")]
         protected static extern IntPtr Tcl_GetStringResult(IntPtr interp);
 
-        [DllImport("tcl8.4")]
+        [DllImport("tcl85")]
         protected static extern void Tcl_DeleteInterp(IntPtr interp);
 
-        [DllImport("tcl8.4")]
+        [DllImport("tcl85")]
         protected static extern void Tcl_Finalize();
 
         protected const int TCL_ERROR = 1;
