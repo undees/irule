@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.email       = ['undees@gmail.com']
   s.homepage    = 'http://github.com/undees/irule'
   s.summary     = '.I.ron.RU.by tc.L. .E.xtension'
-  s.description = 'Provides an tiny subset of the tcl gem for IronRuby'
+  s.description = 'Provides a tiny subset of the tcl gem for IronRuby'
 
   s.required_rubygems_version = '>= 1.3.5'
   s.add_development_dependency 'rspec'
